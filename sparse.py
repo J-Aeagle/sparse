@@ -6,11 +6,13 @@ import sys
 from subprocess import check_call
 from subprocess import SubprocessError
 
+
 def run_and_forward_error(cmd):
     try:
         check_call(cmd)
     except SubprocessError as err:
         sys.exit(err)
+
 
 if __name__ == '__main__':
     curr_path = os.path.dirname(os.path.realpath(__file__))
