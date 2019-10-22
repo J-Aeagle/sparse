@@ -23,7 +23,7 @@ if __name__ == '__main__':
                 clone = 'git clone -n ' + repo
                 d = yml['directory']
                 if d:
-                    d = os.path.abspath((d))
+                    d = os.path.abspath(str(d))
                     clone += ' ' + d
                 else:
                     try:
