@@ -4,9 +4,10 @@ repo: https://github.com/eagleinvsys-sd/sd-core-17
 # https://eagleinvsys.atlassian.net/wiki/spaces/SDDEVOPS/pages/938973896/GIT-LFS+Configuration+DO+THIS+FIRST
 lfs: https://<USERNAME>:<ENCRYPTED PASSWORD>@inno-artifactory.eagleinvsys.com/artifactory/api/lfs/sd-core-17-lfs
 # By default, git clone will create a directory with the same name as the repo.
-# If you want to change it, add a different directory name below (relative or absolute path)
+# If you want to change it, add a different directory name below e.g. directory: ../17 or directory: C:\eagle\17
 directory: 
-# Add to the sparse list below as needed e.g. uncomment by deleting "# "
+# Add to the sparse list below as needed, or uncomment by deleting "# "
+# e.g. if your star_engine build fails because you don't have all the dependencies, uncomment all /3rdparty/ and /src/shared/ folders
 # Do not remove the hidden . files in the root directory
 sparse:
 - /.gitattributes
