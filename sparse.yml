@@ -1,6 +1,6 @@
 # For future repos, e.g. if we add BK etc., copy and paste the github url below
 repo: https://github.com/eagleinvsys-sd/sd-core-17
-# Replace <USERNAME> and <ENCRYPTED PASSWORD> below, for instructions on getting the encrypted password see
+# Replace <USERNAME> and <ENCRYPTED PASSWORD> below, for instructions on getting the encrypted password see steps 5–10 on:
 # https://eagleinvsys.atlassian.net/wiki/spaces/SDDEVOPS/pages/938973896/GIT-LFS+Configuration+DO+THIS+FIRST
 lfs: https://<USERNAME>:<ENCRYPTED PASSWORD>@inno-artifactory.eagleinvsys.com/artifactory/api/lfs/sd-core-17-lfs
 # By default, git clone will create a directory with the same name as the repo.
@@ -29,6 +29,8 @@ sparse:
 # - /eagle/estar/tpe/dynamic/profiledat/
 # - /eagle/estar/tpe/dynamic/resultprofiledll/
 # - /EDM/
+# - /src/pace/
+# - /src/reportprofiledlls/
 # - /src/shared/common/
 # - /src/shared/liblogger/
 # - /src/shared/util/
