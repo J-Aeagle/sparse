@@ -10,3 +10,18 @@
 	- add which subfolders you want (optional, default is only `/src/star_engine/`) 
 	- add local directory name (optional)
 - Run `python sparse.py` from the parent folder where you keep all your local code e.g. `C:\eagle`
+
+## Commands
+
+This script just automates running the following commands
+
+1. `git clone -n <repo> <directory>`
+2. `cd <directory>`
+3. `git config lfs.url <lfs>`
+4. `git config core.sparseCheckout true`
+5. `echo <sparse list path> >> .git/info/sparse-checkout`
+6. `git checkout HEAD`
+
+where the parameters are stored in the `sparse.yml` file.
+
+To add an additional path after the script is run, from within `<directory>` run the last 2 commands. 

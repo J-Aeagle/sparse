@@ -15,8 +15,7 @@ def run_and_forward_error(cmd):
 
 
 if __name__ == '__main__':
-    curr_path = os.path.dirname(os.path.realpath(__file__))
-    file = os.path.join(curr_path, os.path.splitext(os.path.basename(__file__))[0]) + '.yml'
+    file = os.path.join(os.path.dirname(os.path.realpath(__file__)), os.path.splitext(os.path.basename(__file__))[0]) + '.yml'
     try:
         with open(file, 'r') as yml:
             try:
@@ -32,7 +31,8 @@ if __name__ == '__main__':
                         i = repo.rindex('/', 0, len(repo) - 2)
                     except ValueError:
                         sys.exit('/ character not found in repo url')
-                    d = repo[i + 1:]
+                    dot = repo.rfind('.', i + 1)
+                    d = repo[i + 1 : dot if dot > 0 else None]
                 run_and_forward_error(clone)
                 curr_path = os.path.join(os.getcwd(), d)
                 try:
@@ -46,9 +46,9 @@ if __name__ == '__main__':
                         for p in yml['sparse']:
                             sparse.write('\n' + p)
                         sparse.write('\n')
-                    run_and_forward_error(['git', 'checkout', '-f', 'HEAD'])
                 except EnvironmentError as sparse_err:
                     sys.exit('Error writing to .git/info/sparse-checkout: ' + sparse_err.strerror)
+                run_and_forward_error(['git', 'checkout', 'HEAD'])
             except yaml.YAMLError as yml_err:
                 sys.exit(yml_err)
     except EnvironmentError as file_err:
