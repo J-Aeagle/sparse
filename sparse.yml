@@ -33,6 +33,7 @@ sparse:
 # - /src/pace/
 # - /src/reportprofiledlls/
 # - /src/shared/common/
+# - /src/shared/eagleqclient/
 # - /src/shared/liblogger/
 # - /src/shared/util/
 # - /src/shared/versioninfo/

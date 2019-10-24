@@ -40,6 +40,7 @@ if __name__ == '__main__':
                 except EnvironmentError as chdir_err:
                     sys.exit('Error moving to folder ' + curr_path + ': ' + chdir_err.strerror)
                 run_and_forward_error(['git', 'config', 'lfs.url', yml['lfs']])
+                run_and_forward_error(['git-lfs', 'install'])
                 run_and_forward_error(['git', 'config', 'core.sparseCheckout', 'true'])
                 try:
                     with open('.git/info/sparse-checkout', 'w+') as sparse:

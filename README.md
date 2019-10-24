@@ -18,9 +18,10 @@ This script just automates running the following commands
 1. `git clone -n <repo> <directory>`
 2. `cd <directory>`
 3. `git config lfs.url <lfs>`
-4. `git config core.sparseCheckout true`
-5. `echo <sparse list path> >> .git/info/sparse-checkout`
-6. `git checkout HEAD`
+4. `git-lfs install`
+5. `git config core.sparseCheckout true`
+6. `echo <sparse list path> >> .git/info/sparse-checkout`
+7. `git checkout HEAD`
 
 where the parameters are stored in the `sparse.yml` file.
 
