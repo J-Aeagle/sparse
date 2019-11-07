@@ -1,6 +1,6 @@
 # sparse
 
-Python [(download if not installed)](https://www.python.org/downloads/ "Download Python") script to set up [git sparse-checkout](https://git-scm.com/docs/git-read-tree#_sparse_checkout) and git-lfs from [YAML](https://yaml.org/) file while cloning repo.
+Python [(download if not installed)](https://www.python.org/downloads/ "Download Python") script to set up [git sparse-checkout](https://git-scm.com/docs/git-read-tree#_sparse_checkout) and git-lfs from [YAML](https://yaml.org/) file while cloning repo.  (Alternate batch and shell scripts included.)
 
 ## Usage
 
@@ -24,6 +24,6 @@ This script just automates running the following commands
 
 where the parameters are stored in the `sparse.yml` file.
 
-If you don't have Python installed, you can install it from the link above.  Alternatively, you can directly modify the lfs url in the batch file (`sparse.bat` on Windows) or shell script (`chmod +x sparse.sh` then `sparse.sh` on Linux) then run it.
+To run these commands directly, you can modify the lfs url in the batch file (`sparse.bat`) on Windows or shell script (`chmod +x sparse.sh` then `sparse.sh`) on Linux then run it.
 
 To add an additional path after the script is run, from within `<directory>` run the last 2 commands.
