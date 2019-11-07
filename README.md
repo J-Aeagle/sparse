@@ -4,25 +4,26 @@ Python [(download if not installed)](https://www.python.org/downloads/ "Download
 
 ## Usage
 
-- Run `pip install -r requirements.txt`
+- Run `pip3 install -r requirements.txt`
 - Modify `sparse.yml`:
 	- add the required [git-lfs Artifactory url with your encrypted password](https://eagleinvsys.atlassian.net/wiki/spaces/SDDEVOPS/pages/938973896/GIT-LFS+Configuration+DO+THIS+FIRST) by following steps 5–10
 	- add which subfolders you want (optional, default is only `/src/star_engine/`) 
 	- add local directory name (optional)
-- Run `python sparse.py` from the parent folder where you keep all your local code e.g. `C:\eagle`
+- Run `py sparse.py` (Windows) or `chmod +x sparse.py` then `./sparse.py` (Linux) from the parent folder where you keep all your local code e.g. `C:\eagle`
 
 ## Commands
 
 This script just automates running the following commands
 
-1. `git clone -n <repo> <directory>`
-2. `cd <directory>`
-3. `git config lfs.url <lfs>`
-4. `git-lfs install`
-5. `git config core.sparseCheckout true`
-6. `echo <sparse list path> >> .git/info/sparse-checkout`
-7. `git checkout HEAD`
+    git clone -n <repo> <directory>
+    cd <directory>
+    git config lfs.url <lfs>
+    git config core.sparseCheckout true
+    echo <sparse list path> >> .git/info/sparse-checkout
+    git checkout HEAD
 
 where the parameters are stored in the `sparse.yml` file.
 
-To add an additional path after the script is run, from within `<directory>` run the last 2 commands. 
+If you don't have Python installed, you can install it from the link above.  Alternatively, you can directly modify the lfs url in the batch file (`sparse.bat` on Windows) or shell script (`chmod +x sparse.sh` then `sparse.sh` on Linux) then run it.
+
+To add an additional path after the script is run, from within `<directory>` run the last 2 commands.

@@ -13,7 +13,6 @@ sparse:
 - /.gitattributes
 - /.gitignore
 - /.lfsconfig
-# - /3rdparty/bindebug/win64.vc16/
 # - /3rdparty/src/boostlib/
 # - /3rdparty/src/fmt/
 # - /3rdparty/src/googletest/
