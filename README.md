@@ -17,6 +17,7 @@ This script just automates running the following commands
 
     git clone -n <repo> <directory>
     cd <directory>
+    git lfs install
     git config lfs.url <lfs>
     git config core.sparseCheckout true
     echo <sparse list path> >> .git/info/sparse-checkout
