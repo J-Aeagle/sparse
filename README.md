@@ -6,7 +6,7 @@ Python [(download if not installed)](https://www.python.org/downloads/ "Download
 
 - Run `pip3 install -r requirements.txt`
 - Modify `sparse.yml`:
-	- add the required [git-lfs Artifactory url with your encrypted password](https://inno-artifactory.eagleinvsys.com/artifactory/webapp/#/artifacts/browse/tree/General/sd-core-17-lfs) by [following steps 5–10](https://eagleinvsys.atlassian.net/wiki/spaces/SDDEVOPS/pages/938973896/GIT-LFS+Configuration+DO+THIS+FIRST)
+	- add the required [git-lfs Artifactory url with your encrypted password](https://eagleinvsys.atlassian.net/wiki/spaces/SDDEVOPS/pages/938973896/GIT-LFS+Configuration+DO+THIS+FIRST) by following steps 5–10
 	- add which subfolders you want (optional, default is only `/src/star_engine/`) 
 	- add local directory name (optional)
 - Run `py sparse.py` (Windows) or `chmod +x sparse.py` then `./sparse.py` (Linux) from the parent folder where you keep all your local code e.g. `C:\eagle`
