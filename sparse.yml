@@ -13,6 +13,7 @@ sparse:
 - /.gitattributes
 - /.gitignore
 - /.lfsconfig
+# - /3rdparty/bin*/win64.vc16/libzstd*
 # - /3rdparty/src/boostlib/
 # - /3rdparty/src/fmt/
 # - /3rdparty/src/googletest/
@@ -22,6 +23,7 @@ sparse:
 # - /3rdparty/src/parsertl/
 # - /3rdparty/src/pugixml/
 # - /3rdparty/src/sqlite/
+# - /3rdparty/src/zstd-dev/
 # - /eagle/estar/tpe/dynamic/dat/accounting/
 # - /eagle/estar/tpe/dynamic/dat/eagle/star/
 # - /eagle/estar/tpe/dynamic/dat/nxgpdc/portfolio desk/
