@@ -1,7 +1,7 @@
 git clone -n https://github.com/eagleinvsys-sd/sd-core-17
 cd sd-core-17
 git lfs install
-git config lfs.url https://<USERNAME>:<ENCRYPTED PASSWORD>@inno-artifactory.eagleinvsys.com/artifactory/api/lfs/sd-core-17-lfs
+git config lfs.url https://<USERNAME>:<ENCRYPTED PASSWORD>@artifactory.devops.eagleinvsys.com/artifactory/api/lfs/sd-core-17-lfs
 git config core.sparseCheckout true
 echo /.gitattributes >> .git/info/sparse-checkout
 echo /.gitignore >> .git/info/sparse-checkout
